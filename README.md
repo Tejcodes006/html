@@ -71,3 +71,16 @@ END IF;
 END LOOP;
 END;
 /
+
+-----------------------
+declare
+stud s%ROWTYPE;
+begin 
+select*into stud from s
+where sno=&sno;
+dbms_output.put_line('student roll no'||stud.sno);
+dbms_output.put_line('student name'||stud.name);
+dbms_output.put_line('student address'||stud.address);
+dbms_output.put_line('student marks'||stud.marks);
+end;
+/
